@@ -19,7 +19,7 @@ function entryData(){
     content.children[3].children[0].value;//武器B
     content.children[4].children[0].value;//武器C
     content.children[5].children[0].value;//武器D
-    content.children[6].children[0].value;//武器D
+    content.children[6].children[0].value;//武器E
     let name = content.children[1].children[0].value;// 名前の取得
     let bukiA = content.children[2].children[0].value;// 武器Aの取得
     let bukiB = content.children[3].children[0].value;// 武器Bの取得
@@ -42,14 +42,18 @@ function entryData(){
 
     // 登録者情報を出力
     let output = 'data'+ID;
-    document.getElementById(output).textContent='登録者'+ID+'の名前：'+name+'、使用武器：「'+bukiA+'」'+'「'+bukiB+'」'+'「'+bukiC+'」'+'「'+bukiD+'」'+'「'+bukiE+'」';
+    if(ID=='I'){
+        document.getElementById(output).textContent='登録されるルールは：「'+bukiA+'」'+'「'+bukiB+'」'+'「'+bukiC+'」'+'「'+bukiD+'」'+'「'+bukiE+'」';
+    }else{
+        document.getElementById(output).textContent='登録者'+ID+'の名前：'+name+'、使用武器：「'+bukiA+'」'+'「'+bukiB+'」'+'「'+bukiC+'」'+'「'+bukiD+'」'+'「'+bukiE+'」';
+    }
 }
 
 // ランダムボタン処理
 function randomRulet(){
     // 配列
     let idData = Array();
-    idData = {0:'A',1:'B',2:'C',3:'D',4:'E',5:'F',6:'G',7:'H'};
+    idData = {0:'A',1:'B',2:'C',3:'D',4:'E',5:'F',6:'G',7:'H',8:'I'};
     // 登録人数を把握
     let countmember = document.querySelectorAll('.js-name-check');
     let countNum = 0;
@@ -67,6 +71,7 @@ function randomRulet(){
     let NameF = '';
     let NameG = '';
     let NameH = '';
+    let NameI = '';
 
     if(countNum!=0){
         // 配列を作成
@@ -109,7 +114,9 @@ function randomRulet(){
                 let bukiNomber = Math.floor(Math.random()*arrayLength);
                 let htmlName = 'randomData'+newId;
                 let outputHtml = document.getElementById(htmlName);
-                outputHtml.textContent = NameA+'は「'+bukiA[bukiNomber]+'」を使用してください。';
+                if(bukiA!=''){
+                    outputHtml.textContent = NameA+'は「'+bukiA[bukiNomber]+'」を使用してください。';
+                }
             } else if(newId == 'B'){
                 NameB = newName;
                 let bukiB = new Array();
@@ -133,7 +140,9 @@ function randomRulet(){
                 let bukiNomber = Math.floor(Math.random()*arrayLength);
                 let htmlName = 'randomData'+newId;
                 let outputHtml = document.getElementById(htmlName);
-                outputHtml.textContent = NameB+'は「'+bukiB[bukiNomber]+'」を使用してください。';
+                if(bukiB!=''){
+                    outputHtml.textContent = NameB+'は「'+bukiB[bukiNomber]+'」を使用してください。';
+                }
             }else if(newId == 'C'){
                 NameC = newName;
                 let bukiC = new Array();
@@ -157,7 +166,9 @@ function randomRulet(){
                 let bukiNomber = Math.floor(Math.random()*arrayLength);
                 let htmlName = 'randomData'+newId;
                 let outputHtml = document.getElementById(htmlName);
-                outputHtml.textContent = NameC+'は「'+bukiC[bukiNomber]+'」を使用してください。';
+                if(bukiC!=''){
+                    outputHtml.textContent = NameC+'は「'+bukiC[bukiNomber]+'」を使用してください。';
+                }
             }else if(newId == 'D'){
                 NameD = newName;
                 let bukiD = new Array();
@@ -181,7 +192,9 @@ function randomRulet(){
                 let bukiNomber = Math.floor(Math.random()*arrayLength);
                 let htmlName = 'randomData'+newId;
                 let outputHtml = document.getElementById(htmlName);
-                outputHtml.textContent = NameD+'は「'+bukiD[bukiNomber]+'」を使用してください。';
+                if(bukiD!=''){
+                    outputHtml.textContent = NameD+'は「'+bukiD[bukiNomber]+'」を使用してください。';
+                }
             }else if(newId == 'E'){
                 NameE = newName;
                 let bukiE = new Array();
@@ -205,7 +218,9 @@ function randomRulet(){
                 let bukiNomber = Math.floor(Math.random()*arrayLength);
                 let htmlName = 'randomData'+newId;
                 let outputHtml = document.getElementById(htmlName);
-                outputHtml.textContent = NameE+'は「'+bukiE[bukiNomber]+'」を使用してください。';
+                if(bukiE!=''){
+                    outputHtml.textContent = NameE+'は「'+bukiE[bukiNomber]+'」を使用してください。';
+                }
             } else if(newId == 'F'){
                 NameF = newName;
                 let bukiF = new Array();
@@ -229,7 +244,9 @@ function randomRulet(){
                 let bukiNomber = Math.floor(Math.random()*arrayLength);
                 let htmlName = 'randomData'+newId;
                 let outputHtml = document.getElementById(htmlName);
-                outputHtml.textContent = NameF+'は「'+bukiF[bukiNomber]+'」を使用してください。';
+                if(bukiF!=''){
+                    outputHtml.textContent = NameF+'は「'+bukiF[bukiNomber]+'」を使用してください。';
+                }
             }else if(newId == 'G'){
                 NameG = newName;
                 let bukiG = new Array();
@@ -253,7 +270,9 @@ function randomRulet(){
                 let bukiNomber = Math.floor(Math.random()*arrayLength);
                 let htmlName = 'randomData'+newId;
                 let outputHtml = document.getElementById(htmlName);
-                outputHtml.textContent = NameG+'は「'+bukiG[bukiNomber]+'」を使用してください。';
+                if(bukiG!=''){
+                    outputHtml.textContent = NameG+'は「'+bukiG[bukiNomber]+'」を使用してください。';
+                }
             }else if(newId == 'H'){
                 NameH = newName;
                 let bukiH = new Array();
@@ -277,10 +296,78 @@ function randomRulet(){
                 let bukiNomber = Math.floor(Math.random()*arrayLength);
                 let htmlName = 'randomData'+newId;
                 let outputHtml = document.getElementById(htmlName);
-                outputHtml.textContent = NameH+'は「'+bukiH[bukiNomber]+'」を使用してください。';
+                if(bukiH!=''){
+                    outputHtml.textContent = NameH+'は「'+bukiH[bukiNomber]+'」を使用してください。';
+                }
+            }else if(newId == 'I'){
+                NameI = newName;
+                let bukiI = new Array();
+                // 武器の値の確認
+                if(newBuki01!=''){
+                    bukiI[0] = newBuki01;
+                }
+                if(newBuki02!=''){
+                    bukiI[1] = newBuki02;
+                }
+                if(newBuki03!=''){
+                    bukiI[2] = newBuki03;
+                }
+                if(newBuki04!=''){
+                    bukiI[3] = newBuki04;
+                }
+                if(newBuki05!=''){
+                    bukiI[4] = newBuki05;
+                }
+                arrayLength = bukiI.length;//配列の要素数のカウント
+                let bukiNomber = Math.floor(Math.random()*arrayLength);
+                let htmlName = 'randomData'+newId;
+                let outputHtml = document.getElementById(htmlName);
+                if(bukiI!=''){
+                    outputHtml.textContent = NameI+'は「'+bukiI[bukiNomber]+'」を使用してください。';
+                }
             }
         }
     }
+
+    // ルール専用入力判定
+    let newId = 'I';//A,B,C
+    let nameId = 'name'+newId;
+    let bukiId01 = 'buki_01_'+newId; 
+    let bukiId02 = 'buki_02_'+newId; 
+    let bukiId03 = 'buki_03_'+newId; 
+    let bukiId04 = 'buki_04_'+newId; 
+    let bukiId05 = 'buki_05_'+newId; 
+    let newName = document.getElementById(nameId).value;
+    let newBuki01 = document.getElementById(bukiId01).value;
+    let newBuki02 = document.getElementById(bukiId02).value;
+    let newBuki03 = document.getElementById(bukiId03).value;
+    let newBuki04 = document.getElementById(bukiId04).value;
+    let newBuki05 = document.getElementById(bukiId05).value;
+    let arrayLength = 0;//配列の個数
+    
+    NameI = 'ルール';
+    let bukiI = new Array();
+    // 武器の値の確認
+    if(newBuki01!=''){
+        bukiI[0] = newBuki01;
+    }
+    if(newBuki02!=''){
+        bukiI[1] = newBuki02;
+    }
+    if(newBuki03!=''){
+        bukiI[2] = newBuki03;
+    }
+    if(newBuki04!=''){
+        bukiI[3] = newBuki04;
+    }
+    if(newBuki05!=''){
+        bukiI[4] = newBuki05;
+    }
+    arrayLength = bukiI.length;//配列の要素数のカウント
+    let bukiNomber = Math.floor(Math.random()*arrayLength);
+    let htmlName = 'randomData'+newId;
+    let outputHtml = document.getElementById(htmlName);
+    outputHtml.textContent = NameI+'は「'+bukiI[bukiNomber]+'」を使用してください。';
     // foeachで回し、ランダムで1回取得、出力
 
 }
