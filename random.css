@@ -1,0 +1,140 @@
+/* 全体 */
+body {
+    background-color: #858585;
+}
+header {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+    background-color: blue;
+    color: #fff;
+}
+/* h1 */
+h1 {
+    position: relative;
+    z-index: 1;
+}
+h1 .h1-text {
+    z-index: 2;
+    position: relative;
+    background-color: #9085ff;
+    padding: 5px 10px;
+    border-radius: 100px;
+}
+span.circle {
+    position: absolute;
+    background-color: #000000;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+}
+span.circle._yellow {
+    background-color: yellow;
+    top: -16px;
+    right: 20px;
+    width: 100px;
+}
+span.circle._blue {
+    background-color: #eeeeff;
+    right: 6px;
+}
+/* information */
+.main-contents {
+    max-width: 640px;
+    margin: 0 auto;
+}
+.infomation {
+    background-color: #bfbfbf;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 1.25em;
+}
+
+/* entry-contents */
+.main-contents {
+    max-width: 640px;
+    margin: 0 auto;
+}
+.infomation {
+    background-color: #bfbfbf;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 1.25em;
+}
+ul.input-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 0;
+    line-height: 1.25em;
+}
+li.input-edit {
+    background-color: #e2e2e2;
+    border-radius: 10px;
+    padding: 15px;
+    width: calc(100% / 2 - 5px);
+    box-sizing: border-box;
+}
+li.input-edit>h4 {
+    background-color: #0000ff;
+    color: #fff;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 0 0 15px;
+}
+.entry-button.js-entry-data {
+    text-align: center;
+    background-color: #bfbfbf;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 5px 0;
+    letter-spacing: 0.1em;
+    border-radius: 20px;
+    margin: 15px 0 0;
+    cursor: pointer;
+    transition: all ease .25s;
+}
+.entry-button.js-entry-data:hover {
+    background-color: #fff;
+    color: #bfbfbf;
+    border: 2px solid #bfbfbf;
+}
+
+/* 抽選開始ボタン */
+.btn-contents {
+    margin: 15px;
+    line-height: 1.25em;
+}
+div#random-button {
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all ease .25s;
+}
+div#random-button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+
+/* 結果出力 */
+.views-entry-data {
+    background-color: #bfbfbf;
+    border: 1px solid #ffffff;
+}
+.views-data div {
+    padding: 10px 10px;
+    font-size: 12px;
+}
