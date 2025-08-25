@@ -1,0 +1,2 @@
+# splatoon_roulette
+スプラトゥーンランダム武器抽選ツール
